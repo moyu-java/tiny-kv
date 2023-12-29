@@ -1,0 +1,23 @@
+[package]
+name = "tiny-kv"
+version = "0.1.0"
+edition = "2021"
+authors = ["莫语. <moyubit@gmail.com>"]
+description = "A tiny key-value store"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "tiny-kv-cli"
+path = "src/bin/cli.rs"
+
+[[bin]]
+name = "tiny-kv"
+path = "src/bin/server.rs"
+
+[dependencies]
+clap = {version = "4.4.11", features = ["derive"]}
+failure = "0.1.8"
+rustyline = "13.0.0"
+sled = "0.34.7"
+tokio = { version = "1.35.1", features = ["full"] }
