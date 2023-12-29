@@ -1,10 +1,10 @@
-use std::{env, fs};
-use clap::{Parser, ValueEnum};
+use std::{env};
+use clap::{Parser};
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio::net::TcpListener;
 use tiny_kv::engine::KvEngine;
 use tiny_kv::engine::sled::SledEngine;
-use tiny_kv::{KvError, Result};
+use tiny_kv::{Result};
 
 #[derive(Parser)]
 #[command(author, version, about = "A tiny kv server.", long_about = None)]
